@@ -18,6 +18,7 @@ def main():
                 return
         screen.fill('#000000', rect=None, special_flags=0)
         triangle.draw(screen)
+        triangle.update(dt)
         pygame.display.flip()
         fps.tick(60)
         dt = fps.tick(60) / 1000
