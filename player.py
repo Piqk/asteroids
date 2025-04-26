@@ -1,7 +1,7 @@
-from circleshape import CircleShape
+from circleshape import CircleShape # type: ignore
 from constants import *
 import pygame # type: ignore
-from shot import Shot
+from shot import Shot # type: ignore
 
 
 
@@ -10,10 +10,8 @@ class Player(CircleShape):
                     super().__init__(x, y, PLAYER_RADIUS)
                     self.rotation = 0
                     self.timer = 0 
-                    
-
                 
-                   
+
                     # in the player class
             def triangle(self):
                 forward = pygame.Vector2(0, 1).rotate(self.rotation)

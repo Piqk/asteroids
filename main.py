@@ -1,10 +1,10 @@
 
 import pygame # type: ignore
 from constants import *
-from player import Player
-from asteroids import Asteroid
-from asteroidfield import AsteroidField
-from shot import Shot
+from player import Player # type: ignore
+from asteroids import Asteroid # type: ignore
+from asteroidfield import AsteroidField # type: ignore
+from shot import Shot # type: ignore
 import sys
 
 def main():
@@ -36,6 +36,10 @@ def main():
         for asteroid in asteroids:
             if asteroid.collision(triangle) is True:
                 sys.exit("Game Over!")
+            for shot in shots:
+                if shot.collision(asteroid) is True:
+                    asteroid.split()
+                    shot.kill()
         pygame.display.flip()
         dt = fps.tick(60) / 1000
         

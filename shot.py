@@ -1,5 +1,5 @@
-import pygame
-from circleshape import CircleShape
+import pygame # type: ignore
+from circleshape import CircleShape # type: ignore
 from constants import *
 
 class Shot(CircleShape):
